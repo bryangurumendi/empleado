@@ -1,0 +1,16 @@
+<h1>BUSQUEDA DE EMPLEADO POR FILTRO:</h1>
+
+<form method="GET"> {% csrf_token %}
+    <input type="text" id="KeyWord" , name="KeyWord" , placeholder="Filtro">
+    <button type="submit">Buscar</button>
+</form>
+
+<h3>RESULTADO DE LA BUSQUEDA:</h3>
+
+<ul>
+
+    {% for empleado in empleados %}
+    <li>{{empleado}}</li>
+    {% endfor %}
+
+</ul>
